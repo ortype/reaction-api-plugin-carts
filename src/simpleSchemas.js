@@ -572,7 +572,10 @@ const Shipment = new SimpleSchema({
   },
   "type": {
     type: String,
-    allowedValues: ["shipping"],
+    label: "Supported fulfillment type :)",
+    // allowedValues: ["shipping", "digital"],
+    // the above line did not seem to have an affect, with the schema throwing an error
+    // about "digital is not an allowed value",
     defaultValue: "shipping"
   },
   "parcel": {
